@@ -1,0 +1,253 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+        <link rel="stylesheet" type="text/css" href="Sketch_Block.css">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand" />
+        <script src="//use.typekit.net/hzh0adl.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+        <script src="js/jquery.gsap.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script src="js/jquery.stellar.min.js"></script>
+        <script src="js/mainscript.js"></script>
+        <title>Register for Courses | QuickPrep NYC</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta name="description" content="Ready to reach the stars? Register for a QuickPrep NYC Program today!" />
+    </head>
+    <body>
+        <div class="container">
+        <header>
+            <div class="big-bar">
+                <a class="general-logo" href="index.html">
+                    <img src="icons/quick-prep-orb.png" style="width:50px;margin-top:12.5px;">
+                </a>
+                <a class="openmenu mobile-logo">
+                    <img src="icons/quick-prep-orb-mobile.png" style="width:50px;margin-top:12.5px;">
+                </a>
+                <div class="navbar">
+                    <ul>
+                        <a href="index.html"><li>Our Mission</li></a>
+                        <a href="programs.html"><li>Programs</li></a>
+                        <a href="teachers.html"><li>Who We Are</li></a>
+                        <a href="contact.php"><li>Contact Us</li></a>
+                        <a href="register.html">
+                            <li>
+                                <div class="button small">
+                                    Register Now
+                                </div>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div id="menu">
+            <ul>
+                <a href="index.html">
+                    <li>
+                        <img src="icons/mission.png" style="width:50px;"><br>
+                        Our Mission
+                    </li>
+                </a>
+                <a href="programs.html">
+                    <li>
+                        <img src="icons/programs.png" style="width:75px;"><br>
+                        Programs
+                    </li>
+                </a>
+                <a href="teachers.html">
+                    <li>
+                        <img src="icons/teacher.png" style="width:50px;"><br>
+                        The Teachers
+                    </li>
+                </a>
+                <a href="contact.php">
+                    <li>
+                        <img src="icons/contact.png" style="width:50px;"><br>
+                        Contact Us
+                    </li>
+                </a>
+                <br>
+                <a href="register.html">
+                    <li>
+                        <div class="button small">
+                            Register Now
+                        </div>
+                    </li>
+                </a>
+            </ul>
+        </div>
+        <div class="page-picture" id="register">
+            <div class="title-text">
+                 <span class="highlight-text">Register</span>
+            </div>
+        </div>
+        <div class="divider magenta">
+        </div>
+        <div class="content-wrapper">
+            <div class="content">
+                <div class="text">
+                    This registration form is not in service. If you wish to register for one of our outstanding programs, do not hesitate to <a href="contact.php">contact us!</a> We will happily set you and your child up in no time.
+                    <form class="registration-form" method="post" action="submit.php">
+                        <h1 class="highlight-text">Step 1: Tell us about yourself</h1>
+                        <input class="textbox" type="text" name="studentfirstname" placeholder="Student First Name">
+                        <input class="textbox" type="text" name="studentlastname" placeholder="Student Last Name"><br>
+                        <input class="textbox" type="text" name="parentfirstname" placeholder="Parent First Name">
+                        <input class="textbox" type="text" name="parentlastname" placeholder="Parent Last Name"><br>
+                        <input class="textbox" type="tel" name="phone" placeholder="Contact Number">
+                        <input class="textbox" type="email" name="email" placeholder="Email Address"><br>
+                        <h1 class="highlight-text">Step 2: Choose a Program</h1>
+                        <div class="slide-container">
+                        <label>
+                          <input type="radio" name="program" value="group" id="group"/>
+                          <div class="program-slide-registration">
+                            <h1>Group Prep for <br>SAT® Exams</h1>
+                            <hr class="band">
+                            <div class="slide-text">
+                                How will you be registering?<br>
+                                <select class="group-input" id="contract" name="contract" disabled>
+                                    <option value="bulk">Per season</option>
+                                    <option value="session">Per session</option>
+                                </select>
+                                <div id="note" style="margin-top:10px;">
+                                    <div id="session" style="display:none;">
+                                        Note: The Group Prep for SAT® Exam program is $200 per session if you choose to pay per session. If you are expecting to attend all or most sessions, you could potentially save $480 by choosing to pay per season.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </label>
+                        <label>
+                          <input type="radio" name="program" value="individual" id="individual"/>
+                          <div class="program-slide-registration">
+                            <h1>Individual Prep</h1>
+                            <hr class="band">
+                            <div class="slide-text">
+                                Which test are you preparing for?<br>
+                                <select class="ind-input" id="ind-program-select" name="individual-program" disabled>
+                                    <option value="act">ACT®</option>
+                                    <option value="sat">SAT®</option>
+                                    <option value="subject-test">SAT Subject Test™</option>
+                                    <option value="ap-exam">AP® Exam</option>
+                                </select>
+                                <div id="subjects" style="margin-top:10px;">
+                                    <div id="subject-test" style="display:none;">
+                                        Which SAT Subject Test™ are you preparing for?
+                                        <select class="ind-input" name="subject-test-subject" disabled>
+                                            <option value="ush">US History</option>
+                                            <option value="wh">World History</option>
+                                            <option value="mi">Math Level I</option>
+                                            <option value="mii">Math Level II</option>
+                                            <option value="bioe">Biology E</option>
+                                            <option value="biom">Biology M</option>
+                                            <option value="chem">Chemistry</option>
+                                            <option value="physics">Physics</option>
+                                            <option value="spanish">Spanish (with no listening)</option>
+                                        </select>
+                                    </div>
+                                    <div id="ap-exam" style="display:none;">
+                                        Which AP® Exam are you preparing for?
+                                        <select class="ind-input" name="ap-subject" disabled>
+                                            <option value="psych">Psychology</option>
+                                            <option value="usgov">US Government & Politics</option>
+                                            <option value="ush">US History</option>
+                                            <option value="wh">World History</option>
+                                            <option value="ab">Calculus AB</option>
+                                            <option value="bc">Calculus BC</option>
+                                            <option value="bio">Biology</option>
+                                            <option value="chem">Chemistry</option>
+                                            <option value="physcem">Physics C: Electricity & Magnetism</option>
+                                            <option value="physcm">Physics C: Mechanics</option>
+                                            <option value="phys1">Physics 1: Algebra-based</option>
+                                            <option value="phys2">Physics 2: Algebra-based</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="sessions" style="margin-top:10px;">
+                                    How many sessions are you  registering?<br>
+                                    <input class="textbox-short ind-input" type="number" name="sessions" disabled> Sessions of
+                                    <select class="ind-input textbox-medium" name="time" disabled>
+                                        <option value="60">60 min</option>
+                                        <option value="90">90 min</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        </label>
+                        </div>
+                        <!--Content-->
+                        <h1 class="highlight-text">Step 3: Choose a Payment Method</h1>
+                        <!--Content-->
+                        <input class="submit-button close-consult button-dark" type="submit" value="Send">
+                    </form>
+                </div>
+                <div class="slide-container">
+                    <a href="programs.html">
+                        <div class="slide">
+                            <h1>Programs</h1>
+                            <hr class="band">
+                            <div class="slide-text">
+                                Take a look at our selection of effective tutoring programs
+                            </div>
+                        </div>
+                    </a>
+                    <a href="teachers.html">
+                        <div class="slide">
+                            <h1>Meet the Teachers</h1>
+                            <hr class="band">
+                            <div class="slide-text">
+                                Meet the stars who will make your student a superstar!
+                            </div>
+                        </div>
+                    </a>
+                    <a href="questions.html">
+                        <div class="slide">
+                            <h1>FAQs</h1>
+                            <hr class="band">
+                            <div class="slide-text">
+                                Get quick, clear answers to the most common questions
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="divider magenta">
+            </div>
+            <div class="footer">
+                <div class="footer-links">
+                    <div class="address">
+                        330 7th Floor<br>
+                        7th Avenue between 28th & 29th Streets<br>
+                        New York, NY 10001
+                    </div>
+                    <div class="contact">
+                        QuickPrep NYC<br>
+                        <a href="tel:+13478680527">1 (347) 868-0527</a><br>
+                        <a href="mailto:info@quickprep.nyc">info@quickprep.nyc</a><br>
+                    </div>
+                </div>
+                <hr>
+                <div class="footer-orb">
+                    <img src="icons/quick-prep-orb-color.png" style="position:relative;width:75px;bottom:45px;"/>
+                </div>
+                <div class="connect lower" style="display:inline-block;">
+                    <a href=""><img class="social-icon" src="icons/facebook.png"></a>
+                    <a href=""><img class="social-icon" src="icons/twitter.png"></a>
+                    <a href=""><img class="social-icon" src="icons/linkedin.png"></a>
+                </div>
+                <div class="copyright lower" style="display:inline-block;">
+                    &copy; 2015 QuickPrep, LLC
+                </div>
+            </div>
+            <div class="divider gray">
+            </div>
+        </footer>
+        </div>
+    </body>
+</html>
